@@ -33,7 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   $stateProvider
 
   // setup an abstract state for the tabs directive
-  .state('tab', {
+    .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -51,24 +51,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
+  .state('tab.beer-guide', {
+    url: '/beer-guide',
+    views: {
+      'tab-beer-guide': {
+        templateUrl: 'templates/tab-beer-guide.html',
+        controller: 'BeerGuideCtrl'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+    }
+  })
+
+  .state('tab.beer-guide-detail', {
+    url: '/beer-guide/:chatId',
+    views: {
+      'tab-beer-guide': {
+        templateUrl: 'templates/beer-guide-detail.html',
+        controller: 'BeerGuideDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
